@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vakit Geldi 2025</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .timeline {
+      margin-top: 40px;
+      border-left: 2px solid #fff;
+      padding-left: 20px;
+    }
+    .event {
+      margin-bottom: 30px;
+    }
+    .event time {
+      font-weight: bold;
+      color: #80ff80;
+    }
+    .order-toggle {
+      margin: 20px 0;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Vakit Geldi 2025</h1>
+
+  <div class="order-toggle">
+    <button onclick="toggleOrder()">Eskiden Yeniye / Yeniden Eskiye</button>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <div class="event">
+      <time>19 Mart 2025</time>
+      <p>İmamoğlu tutuklandı. Türkiye’de gündem altüst oldu.</p>
+    </div>
+    <div class="event">
+      <time>20 Mart 2025</time>
+      <p>İstanbul’da sokaklarda dev pankartlar: “Bu daha başlangıç!”</p>
+    </div>
+  </div>
+
+  <script>
+    const timeline = document.getElementById('timeline');
+    let reversed = false;
+
+    function toggleOrder() {
+      const events = Array.from(timeline.children);
+      reversed = !reversed;
+      timeline.innerHTML = '';
+      if (reversed) {
+        events.reverse().forEach(e => timeline.appendChild(e));
+      } else {
+        events.reverse().forEach(e => timeline.appendChild(e));
+      }
+    }
+  </script>
+
+</body>
+</html>
