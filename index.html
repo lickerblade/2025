@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>✌🏻 Direniş Timeline ✌🏻</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>✌🏻 Direniş Timeline ✌🏻</h1>
-    </header>
-
-    <main>
-        <div class="timeline-container">
-            <div class="timeline-item">
-                <div class="date">18 Mart 2025</div>
-                <ul class="content">
-                    <li>Ekrem İmamoğlu'nun diploması hukuksuzca iptal edildi.</li>
-                    <li>Artvin Hopa Belediyesi, İmamoğlu'nun diplomasını belediye binasına astı.</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item">
-                <div class="date">19 Mart 2025</div>
-                <ul class="content">
-                    <li>İmamoğlu sabah saatlerinde kolluk ekipleri ile evinden göz altına alındı.</li>
-                    <li>Göz altına alınırken video paylaşan İmamoğlu: "hepinizi çok seviyorum, ben kendimi milletime emanet ediyorum."</li>
-                    <li>Sosyal medyaya erişim sınırlaması getirildi.</li>
-                    <li>"Milletin İradesine Sahip Çıkıyoruz" sloganı ile, halk 20:30'da Saraçhane Buluşmasına çağrıldı.</li>
-                </ul>
-            </div>
-
-            <!-- Diğer tarihler için de timeline-item'lar ekleyebilirsiniz -->
+        <div id="date-toggle">
+            <button id="ascending">Eskiden Yeniye</button>
+            <button id="descending">Yeniden Eskiye</button>
         </div>
-
-        <!-- Sıralama butonu -->
-        <button class="toggle-btn" onclick="toggleOrder()">Eskiden Yeniye ⌃ / Yeniden Eskiye ⌵</button>
+    </header>
+    
+    <main>
+        <section id="timeline">
+            <div class="timeline-item" data-date="18 Mart 2025">
+                <div class="timeline-content">
+                    <h2>18 Mart 2025</h2>
+                    <ul>
+                        <li>Ekrem İmamoğlu'nun diploması hukuksuzca iptal edildi.</li>
+                        <li>Artvin Hopa Belediyesi, İmamoğlu'nun diplomasını belediye binasına astı.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item" data-date="19 Mart 2025">
+                <div class="timeline-content">
+                    <h2>19 Mart 2025</h2>
+                    <ul>
+                        <li>İmamoğlu sabah saatlerinde kolluk ekipleri ile evinden göz altına alındı.</li>
+                        <li>Göz altına alınırken video paylaşan İmamoğlu: "hepinizi çok seviyorum, ben kendimi milletime emanet ediyorum."</li>
+                        <li>Sosyal medyaya erişim sınırlaması getirildi.</li>
+                        <li>"Milletin İradesine Sahip Çıkıyoruz" sloganı ile, halk 20:30'da Saraçhane Buluşmasına çağrıldı.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="script.js"></script>
