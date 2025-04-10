@@ -1,4 +1,4 @@
-// Timeline sort functionality
+// Timeline sorting functionality
 document.getElementById('ascending').addEventListener('click', () => {
     sortTimeline('ascending');
 });
